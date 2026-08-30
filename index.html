@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IMPACTO LÍMITE Publicador</title>
+<meta name="description" content="Aplicación local de uso propio que publica videos en el canal de YouTube IMPACTO LÍMITE mediante OAuth 2.0.">
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+<header class="marca">
+  <div class="marca-int">
+    <div class="rayo" aria-hidden="true"></div>
+    <div class="marca-txt">IMPACTO LÍMITE Publicador<span>Aplicación local de uso propio</span></div>
+  </div>
+</header>
+
+<main>
+  <h1>IMPACTO LÍMITE Publicador</h1>
+  <p class="fecha">Página principal de la aplicación · actualizada el 30 de agosto de 2026</p>
+
+  <p><strong>IMPACTO LÍMITE Publicador</strong> es una aplicación de escritorio de uso personal.
+  Corre en la computadora de su autor y sirve para un solo propósito: subir al canal de YouTube
+  <strong>IMPACTO LÍMITE</strong> los videos cortos que ese mismo autor produce, una vez que él los
+  aprobó manualmente.</p>
+
+  <div class="destacado">
+    <p><strong>No es un producto ni un servicio.</strong> No se distribuye, no se instala en
+    dispositivos de terceros, no tiene registro de usuarios y no acepta cuentas ajenas. La única
+    cuenta de Google que puede autorizarla es la de su autor, que es a la vez el dueño del canal.</p>
+  </div>
+
+  <h2>Qué hace</h2>
+  <p>La aplicación automatiza las tareas mecánicas de publicación de un canal de videos cortos de
+  divulgación — fenómenos naturales, ciencia, historia y sucesos documentados. Concretamente, y
+  sólo después de una aprobación humana explícita:</p>
+  <ul>
+    <li>Sube un archivo de video al canal, en estado <strong>privado</strong>.</li>
+    <li>Le asigna la miniatura correspondiente.</li>
+    <li>Lo agrega a la lista de reproducción temática que corresponda.</li>
+  </ul>
+  <p>No lee, analiza ni recopila información de otros canales, ni de espectadores, ni de terceros.</p>
+
+  <h2>Cómo se conecta con YouTube</h2>
+  <p>Mediante <strong>OAuth 2.0</strong>, el mecanismo estándar de Google. La aplicación
+  <strong>nunca pide, recibe ni almacena la contraseña</strong> de la cuenta de Google: el
+  consentimiento se otorga en la pantalla del propio Google, y la aplicación recibe únicamente un
+  token de acceso limitado a los permisos concedidos.</p>
+
+  <h2>Permisos que solicita</h2>
+  <div class="tabla-cont">
+    <table>
+      <thead><tr><th>Permiso</th><th>Para qué se usa</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><code>youtube.upload</code></td>
+          <td>Subir el archivo de video y establecer su miniatura.</td>
+        </tr>
+        <tr>
+          <td><code>youtube.force-ssl</code></td>
+          <td>Agregar el video publicado a la lista de reproducción que le corresponde. Es el
+          permiso de menor alcance que Google ofrece para esa operación.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Cómo funciona por dentro</h2>
+  <p>La aplicación está escrita en Node.js y FFmpeg, guarda su estado en una base de datos local
+  SQLite y se opera desde un panel web que sólo escucha en la red local del domicilio de su autor.
+  No expone ningún servicio a Internet y no tiene servidores propios.</p>
+
+  <h2>Documentos</h2>
+  <p>El tratamiento de datos y las condiciones de uso están descritos en detalle acá:</p>
+  <ul>
+    <li><a href="privacidad.html">Política de privacidad</a></li>
+    <li><a href="terminos.html">Condiciones del servicio</a></li>
+  </ul>
+
+  <h2>Contacto</h2>
+  <p>Ramiro Fernando Andrade — <a href="mailto:ramirofernandoandrade@gmail.com">ramirofernandoandrade@gmail.com</a></p>
+
+  <nav class="pie">
+    <a href="index.html">Inicio</a>
+    <a href="privacidad.html">Privacidad</a>
+    <a href="terminos.html">Condiciones</a>
+  </nav>
+</main>
+
+</body>
+</html>

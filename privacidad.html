@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de privacidad — IMPACTO LÍMITE Publicador</title>
+<meta name="description" content="Política de privacidad de IMPACTO LÍMITE Publicador: qué datos de Google usa la aplicación, cómo los almacena y cómo revocar el acceso.">
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+<header class="marca">
+  <div class="marca-int">
+    <div class="rayo" aria-hidden="true"></div>
+    <div class="marca-txt">IMPACTO LÍMITE Publicador<span>Política de privacidad</span></div>
+  </div>
+</header>
+
+<main>
+  <h1>Política de privacidad</h1>
+  <p class="fecha">Vigente desde el 30 de agosto de 2026 · última actualización: 30 de agosto de 2026</p>
+
+  <p>Esta política describe cómo la aplicación <strong>IMPACTO LÍMITE Publicador</strong> (en
+  adelante, «la aplicación») trata la información a la que accede a través de las APIs de Google.</p>
+
+  <div class="destacado">
+    <p><strong>Resumen en una línea:</strong> la aplicación es de uso exclusivamente personal de su
+    autor, corre en su propia computadora, no tiene servidores, no recopila datos de terceros y no
+    comparte información con nadie.</p>
+  </div>
+
+  <h2>1. Responsable</h2>
+  <p>Ramiro Fernando Andrade, persona física, autor y único usuario de la aplicación.<br>
+  Contacto: <a href="mailto:ramirofernandoandrade@gmail.com">ramirofernandoandrade@gmail.com</a></p>
+
+  <h2>2. Naturaleza de la aplicación</h2>
+  <p>La aplicación es un programa de escritorio que se ejecuta localmente en la computadora de su
+  autor. <strong>No es un servicio en línea</strong>, no se distribuye a terceros, no admite
+  registro de usuarios y no puede ser utilizada por ninguna cuenta distinta de la de su autor, que
+  es a su vez el propietario del canal de YouTube al que publica.</p>
+  <p>La aplicación no tiene servidores propios ni infraestructura en la nube. Este sitio web existe
+  únicamente para alojar los documentos que Google requiere; es estático y no recibe ni procesa
+  datos de sus visitantes.</p>
+
+  <h2>3. Datos de Google a los que accede</h2>
+  <p>La aplicación solicita, mediante OAuth 2.0, los siguientes permisos, y sólo esos:</p>
+  <div class="tabla-cont">
+    <table>
+      <thead><tr><th>Permiso</th><th>Datos a los que da acceso</th><th>Uso exclusivo que se le da</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><code>https://www.googleapis.com/auth/youtube.upload</code></td>
+          <td>Capacidad de subir videos y establecer miniaturas en el canal del titular.</td>
+          <td>Subir un archivo de video propio, previamente aprobado por el titular, y asignarle su
+          miniatura.</td>
+        </tr>
+        <tr>
+          <td><code>https://www.googleapis.com/auth/youtube.force-ssl</code></td>
+          <td>Lectura y escritura sobre el canal del titular.</td>
+          <td>Únicamente agregar el video recién subido a la lista de reproducción que le
+          corresponde, y consultar la identidad del canal para confirmar que la conexión es la
+          correcta.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="destacado">
+    <p>Se solicita <code>youtube.force-ssl</code> por una razón técnica concreta y no por
+    conveniencia: la operación de agregar un video a una lista de reproducción
+    (<code>playlistItems.insert</code>) no admite ningún permiso de menor alcance en la API de
+    YouTube. El permiso concedido es más amplio que el uso que la aplicación le da.</p>
+  </div>
+
+  <h2>4. Qué NO hace la aplicación</h2>
+  <ul>
+    <li>No accede a datos de otras cuentas de Google. No hay otras cuentas.</li>
+    <li>No accede a Gmail, Drive, Contactos, Calendario ni a ningún otro servicio de Google.</li>
+    <li>No recopila información de espectadores, suscriptores ni de otros canales.</li>
+    <li>No lee ni almacena comentarios de usuarios.</li>
+    <li>No solicita, recibe ni almacena la contraseña de la cuenta de Google. El consentimiento se
+    da en la pantalla de Google; la aplicación sólo recibe un token.</li>
+    <li>No utiliza cookies, analítica, publicidad ni rastreadores, ni en la aplicación ni en este
+    sitio.</li>
+  </ul>
+
+  <h2>5. Almacenamiento y seguridad</h2>
+  <p>Las credenciales de OAuth — identificador de cliente, secreto de cliente y token de
+  actualización — se guardan <strong>únicamente en un archivo local</strong> de la computadora del
+  autor, excluido del control de versiones y nunca transmitido a ningún destino distinto de los
+  servidores de Google durante la propia autenticación.</p>
+  <p>La aplicación no envía esos datos a ningún tercero, no los registra en sus archivos de
+  actividad y no los muestra en pantalla. No existe ninguna base de datos remota.</p>
+
+  <h2>6. Uso limitado de los datos de Google</h2>
+  <p>El uso que la aplicación hace de la información recibida de las APIs de Google se ajusta a la
+  <a href="https://developers.google.com/terms/api-services-user-data-policy" rel="noopener">Política
+  de Datos de Usuario de los Servicios de API de Google</a>, incluidos sus
+  <strong>requisitos de Uso Limitado</strong>. En particular:</p>
+  <ul>
+    <li>Los datos se usan exclusivamente para las funciones descritas en esta política.</li>
+    <li><strong>No se transfieren a terceros</strong>, salvo que fuera necesario por obligación
+    legal.</li>
+    <li><strong>No se utilizan para publicidad</strong> de ningún tipo.</li>
+    <li><strong>No se utilizan para desarrollar, entrenar ni mejorar modelos de inteligencia
+    artificial</strong>, ni propios ni de terceros.</li>
+    <li>Ninguna persona puede leerlos, salvo el propio titular de la cuenta.</li>
+  </ul>
+
+  <h2>7. Conservación y eliminación</h2>
+  <p>El token de actualización se conserva mientras la aplicación esté en uso. Se elimina borrando
+  el archivo local de credenciales, o revocando el acceso desde la cuenta de Google. No queda
+  ninguna copia en ningún otro lugar.</p>
+
+  <h2>8. Cómo revocar el acceso</h2>
+  <p>El titular puede retirar el permiso en cualquier momento desde
+  <a href="https://myaccount.google.com/permissions" rel="noopener">myaccount.google.com/permissions</a>,
+  seleccionando «IMPACTO LÍMITE Publicador» y quitando su acceso. La revocación es inmediata y deja
+  a la aplicación sin ninguna capacidad sobre el canal.</p>
+
+  <h2>9. Menores</h2>
+  <p>La aplicación no está dirigida a menores de edad y no recopila información de ninguna persona,
+  ya que no tiene usuarios más allá de su autor.</p>
+
+  <h2>10. Cambios en esta política</h2>
+  <p>Si el funcionamiento de la aplicación cambia, esta página se actualiza y se modifica la fecha
+  del encabezado. No hay usuarios a quienes notificar más allá del propio autor.</p>
+
+  <h2>11. Contacto</h2>
+  <p>Ante cualquier consulta sobre esta política:
+  <a href="mailto:ramirofernandoandrade@gmail.com">ramirofernandoandrade@gmail.com</a></p>
+
+  <nav class="pie">
+    <a href="index.html">Inicio</a>
+    <a href="privacidad.html">Privacidad</a>
+    <a href="terminos.html">Condiciones</a>
+  </nav>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,104 @@
+/* IMPACTO LÍMITE Publicador — páginas legales públicas.
+   Sobrio a propósito: son documentos que alguien lee para entender qué hace la
+   aplicación con sus datos, no una página de venta. */
+
+:root{
+  --carbon:#0F1413;
+  --rayo:#F5C518;
+  --turquesa:#4FC3CE;
+
+  --fondo:#F7F8F7;
+  --superficie:#FFFFFF;
+  --texto:#161D1C;
+  --texto-2:#4B5654;
+  --texto-3:#6D7977;
+  --borde:#DCE3E1;
+  --acento-tinta:#7A5B00;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --fondo:#0F1413;
+    --superficie:#171E1D;
+    --texto:#ECF1EF;
+    --texto-2:#A2AFAC;
+    --texto-3:#84918E;
+    --borde:#2A3433;
+    --acento-tinta:#F5C518;
+  }
+}
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:var(--fondo);
+  color:var(--texto);
+  font-family:"Segoe UI",Roboto,-apple-system,system-ui,sans-serif;
+  font-size:17px;
+  line-height:1.65;
+}
+
+header.marca{
+  background:var(--carbon);
+  border-bottom:3px solid var(--rayo);
+  padding:26px 22px;
+}
+.marca-int{
+  max-width:760px;margin:0 auto;
+  display:flex;gap:15px;align-items:center;
+}
+.rayo{
+  width:26px;height:36px;flex:none;
+  background:var(--rayo);
+  clip-path:polygon(56% 0%, 16% 54%, 44% 54%, 32% 100%, 84% 40%, 52% 40%);
+}
+.marca-txt{font-weight:700;font-size:15px;letter-spacing:.06em;color:#fff}
+.marca-txt span{color:var(--turquesa);font-weight:400;display:block;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;margin-top:2px}
+
+main{max-width:760px;margin:0 auto;padding:38px 22px 80px}
+
+h1{
+  font-size:clamp(25px,5.2vw,33px);
+  line-height:1.18;letter-spacing:-.015em;
+  margin:0 0 6px;text-wrap:balance;
+}
+.fecha{color:var(--texto-3);font-size:14.5px;margin:0 0 30px}
+h2{
+  font-size:20px;line-height:1.28;letter-spacing:-.01em;
+  margin:34px 0 10px;text-wrap:balance;
+}
+h3{font-size:17px;margin:24px 0 8px}
+p{margin:0 0 15px}
+ul{margin:0 0 15px;padding-left:22px}
+li{margin-bottom:7px}
+a{color:var(--acento-tinta);text-underline-offset:3px}
+strong{font-weight:600}
+code{
+  font-family:Consolas,ui-monospace,monospace;font-size:.87em;
+  background:var(--superficie);border:1px solid var(--borde);
+  border-radius:4px;padding:1px 5px;word-break:break-word;
+}
+
+.destacado{
+  background:var(--superficie);
+  border:1px solid var(--borde);
+  border-left:3px solid var(--turquesa);
+  border-radius:0 9px 9px 0;
+  padding:16px 19px;margin:22px 0;
+}
+.destacado p:last-child{margin-bottom:0}
+
+.tabla-cont{overflow-x:auto;margin:20px 0}
+table{border-collapse:collapse;width:100%;min-width:460px;font-size:15.5px}
+th{
+  text-align:left;font-size:12px;letter-spacing:.07em;text-transform:uppercase;
+  color:var(--texto-3);padding:0 14px 8px 0;border-bottom:1.5px solid var(--borde);
+}
+td{padding:11px 14px 11px 0;border-bottom:1px solid var(--borde);vertical-align:top}
+
+nav.pie{
+  border-top:1px solid var(--borde);
+  margin-top:44px;padding-top:22px;
+  font-size:15px;color:var(--texto-3);
+}
+nav.pie a{margin-right:16px;display:inline-block}
